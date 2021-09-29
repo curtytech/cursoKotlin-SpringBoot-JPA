@@ -1,0 +1,21 @@
+metadata:
+  labels:
+    app: ${project.artifactId}
+  name: ${project.artifactId}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $${project.artifactId}
+  template:
+    metadata:
+      labels:
+        app: ${project.artifactId}
+      annotations:
+        timestamp: ${timestamp}
+    spec:
+      serviceAccountName: todos
+      containers:
+        - name: ${project.artifactId}
+          image: "leogloria/${project.artifactId}:${project.version}"
+

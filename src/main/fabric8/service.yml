@@ -1,0 +1,13 @@
+spec:
+  serviceAccountName: tour
+  selector:
+    app: ${project.artifactId}
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+metadata:
+  labels:
+    app: ${spring.application.name}
+  name: ${project.artifactId}

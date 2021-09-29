@@ -14,8 +14,9 @@ class JsonController {
 
     @GetMapping("/cliente")
     fun getCliente(): Cliente {
-        var telefone = Telefone("21", "21986342478", "Fixo")
-        var cliente = Cliente(1, "Eu", Date(), null)
+        var telefone = Telefone("21", "27178093", "fixo")
+        var cliente = Cliente(1,"Leonardo", Date(), telefone)
         return cliente
+
     }
 }
