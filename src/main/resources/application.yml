@@ -8,6 +8,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
+      # nunca Subir com create-drop
       ddl-auto: create-drop
     generate-ddl: true
 
